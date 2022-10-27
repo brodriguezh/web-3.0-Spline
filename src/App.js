@@ -1,6 +1,6 @@
 import Spline from '@splinetool/react-spline';
 import { useState } from 'react';
-import { IoMenu, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5"
+import { IoMenu, IoLogoGithub } from "react-icons/io5"
 
 import Brandon from "./images/brandon.jpg";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
