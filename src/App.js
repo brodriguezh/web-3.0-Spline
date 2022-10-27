@@ -73,7 +73,7 @@ function App() {
         <div className="relative h-screen w-screen" id="home">
           <Spline scene="https://prod.spline.design/EUlY-HI9cXnaBLJ1/scene.splinecode" />
 
-          <div className='absolute bottom-2 w-full justify-center items-center flex gap-3'>
+          <div className='absolute bottom-2 w-full justify-center items-center flex gap-3 invisible md:visible'>
             <div className='shadow-md p-2 flex items-center justify-center bg-zinc-900 rounded-3xl'>
               <p className='text-white'>Move: WASD Keys</p>
             </div>
@@ -81,7 +81,7 @@ function App() {
               <p className='text-white'>Jump: Space Key</p>
             </div>
             <div className='shadow-md p-2 flex items-center justify-center bg-zinc-900 rounded-3xl'>
-              <p className='text-white'>Camera Arrows Keys</p>
+              <p className='text-white'>Camera: Arrows Keys</p>
             </div>
           </div>
         </div>
