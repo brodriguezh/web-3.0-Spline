@@ -7,6 +7,9 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { Experience, Projects, SocialLinks } from './data';
 
+import BRResume from "./Resume/Brandon's Tech RESUME.pdf"
+
+
 import { AnimatePresence, motion } from "framer-motion"
 
 function App() {
@@ -32,9 +35,11 @@ function App() {
               ease-in-out'>Projects</a>
               <a href='#contact' className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 
               ease-in-out'>Contact</a>
-              <a href='#' className='ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer 
-              border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out'>
-                Download</a>
+              <a 
+                href={BRResume}
+                className='ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out' target="_blank">
+                  Resume
+              </a>
             </div>
 
             <motion.div
@@ -57,20 +62,26 @@ function App() {
                 ease-in-out' onClick={() => setIsActive(false)} >Projects</a>
                 <a href='#contact' className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 
                 ease-in-out' onClick={() => setIsActive(false)} >Contact</a>
-                <a href='#' className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer 
+                <a href={BRResume} className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer 
                 border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out' target="_blank" onClick={() => setIsActive(false)} >
-                  Download</a>
+                  Resume</a>
               </div>
             )}
           </div>
         </nav>
         
-        <div className="relative" id="home">
-          <Spline scene="https://prod.spline.design/9Nhb37CuRn7ZHkSe/scene.splinecode" />
+        <div className="relative pt-10" id="home">
+          <Spline scene="https://prod.spline.design/EUlY-HI9cXnaBLJ1/scene.splinecode" />
 
-          <div className='absolute bottom-10 w-full justify-center items-center flex'>
-            <div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl'>
-              <p className='text-white'>Press and drag to orbit</p>
+          <div className='absolute bottom-2 w-full justify-center items-center flex gap-3'>
+            <div className='shadow-md p-2 flex items-center justify-center bg-zinc-900 rounded-3xl'>
+              <p className='text-white'>Move: WASD Keys</p>
+            </div>
+            <div className='shadow-md p-2 flex items-center justify-center bg-zinc-900 rounded-3xl'>
+              <p className='text-white'> Camera: Arrows Keys  </p>
+            </div>
+            <div className='shadow-md p-2 flex items-center justify-center bg-zinc-900 rounded-3xl'>
+              <p className='text-white'>Jump: Space Key</p>
             </div>
           </div>
         </div>
@@ -107,9 +118,9 @@ function App() {
               font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 
               hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg 
               hover:dark:shadow-teal-800/80">
-                <span class="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0" target="_blank">
-                  Download
-                </span>
+                <a href={BRResume} class="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0" target="_blank">
+                  Resume
+                </a>
               </motion.button>
             </div>
           </section>
